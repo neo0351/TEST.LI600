@@ -1,5 +1,6 @@
 # Author: Jeremiah Anderson
 # Email: jeanderson@bnl.gov
+# License: GPLv3.0
 # Date created: 2020-12-23
 # Date last modified:
 
