@@ -2,14 +2,16 @@
 % Please edit documentation in R/LI600_read_flash.R
 \name{LI600_read_flash}
 \alias{LI600_read_flash}
-\title{A function to read LI-600 flash files}
+\title{A function to read LI-600 flash files.}
 \usage{
 LI600_read_flash(file_loc)
 }
 \arguments{
-\item{file_loc}{file containing flash data.  Same format as read.csv.}
+\item{file_loc}{file containing flash data.  Same format as \link[utils]{read.csv}.}
 }
 \description{
-This function will read LI-600 files, convert data on top of file into
-columns, and remove secondary headers.
+This function will read LI-600 flash files, convert data on top of file into
+columns, and remove secondary headers.  If configured, the LI600 will output
+a file for each flash from the fluorometer.  This file can be used to analyze
+the flash.  See \link{LI600_read_data} for reading main data files.
 }

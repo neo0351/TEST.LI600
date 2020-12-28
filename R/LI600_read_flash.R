@@ -4,12 +4,14 @@
 # Date created: 2020-12-23
 # Date last modified:
 
-#' A function to read LI-600 flash files
+#' A function to read LI-600 flash files.
 #'
-#' This function will read LI-600 files, convert data on top of file into
-#' columns, and remove secondary headers.
+#' This function will read LI-600 flash files, convert data on top of file into
+#' columns, and remove secondary headers.  If configured, the LI600 will output
+#' a file for each flash from the fluorometer.  This file can be used to analyze
+#' the flash.  See \link{LI600_read_data} for reading main data files.
 #'
-#' @param file_loc  file containing flash data.  Same format as read.csv.
+#' @param file_loc  file containing flash data.  Same format as \link[utils]{read.csv}.
 #' @importFrom utils read.csv type.convert
 #' @export
 
