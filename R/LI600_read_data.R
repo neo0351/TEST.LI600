@@ -15,6 +15,11 @@
 
 
 LI600_read_data <- function(file_loc){
+  # Import file
   li600_df <- type.convert(read.csv(file_loc, skip=1)[-1,], as.is=T)
+  # Combine date and time, convert to POSIX
+  li600_df$Date <- as.POSIXct(paste(li600_df$Date, li600_df$Time))
+  # drop time
+  li600_df <- li600_df[,!names(li600_df) %in% c("Time")]
   return(li600_df)
 }

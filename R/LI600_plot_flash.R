@@ -35,8 +35,12 @@ LI600_plot_flash <- function(flash_df, main_title=NULL){
     points(flash_df$TIME, flash_df$FLR, pch=16)
     mtext(title_list[i], side=3, line=0, font=2)
   }
-
-  if(!is.null(main_title)) mtext(main_title, side=3, line=0, font=2, outer=T)
+  
+  if(is.null(main_title)){
+    mtext(flash_df$flashId[1], side=3, line=0, font=2, outer=T)
+  }else if(!is.null(main_title)){
+    mtext(main_title, side=3, line=0, font=2, outer=T)
+  }
 
   par(opar)
   return(NULL)
